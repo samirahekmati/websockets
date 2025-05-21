@@ -1,0 +1,58 @@
+html{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#wrapper {
+    width: 600px;
+    background-color: beige;
+
+    /* pad everything insade the wrapper  */
+    padding: 1em;
+
+    /* center the wrapper  */
+    margin: 3em auto;
+
+    /* apply box shadow  */
+    box-shadow: 0 5px 10px;
+}
+
+#status {
+    display: inline;
+    margin: 1em;
+}
+
+textarea {
+    width: 90%;
+    padding: 0.3rem;
+    border-radius: 3px;
+    min-height: 20%;
+    margin-bottom: 1em;
+}
+
+button{
+    border: none;
+    padding: 0.5rem 0.9rem;
+    font-size: 0.9rem;
+    border-radius: 3px;
+    color: rgb(24, 24, 24);
+    border-bottom: 1px solid black;
+    background-color: rgb(196, 116, 116);
+}
+
+button[type="submit"]{
+    background-color: rgb(113, 179, 113);
+}
+
+button:hover {
+    background-color: rgb(190, 208, 245);
+    opacity: 0.7;
+    color: white;
+    cursor: pointer;
+}
+
+/* hide form until the open ws button is clicked  */
+#form{
+display: none;
+}
+
+
