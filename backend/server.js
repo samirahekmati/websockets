@@ -44,11 +44,16 @@ websocket.on('request', (req)=>{
     connection.send('connection established...') //this message will show in the browser console
     console.log('connection established and accepted.') //this log will show in the terminal
 
+    // echo what client sends
     connection.on('message', (message) => {
         if (message.type === 'utf8') {
             console.log('Received Message:', message.utf8Data);  // <--- You'll see it here
             connection.sendUTF(`You said: ${message.utf8Data}`);//this message will show in the browser console
         }
     });
+
+    connection.on("close", (code, description) => {
+        console.log(`Connection ${connection.remoteAddress} disconnected (code:${code}, reason: ${description})`)
+    })
 })
 
